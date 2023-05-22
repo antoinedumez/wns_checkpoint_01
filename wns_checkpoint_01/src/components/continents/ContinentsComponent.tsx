@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../logo.svg';
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import './index.css';
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -10,7 +9,6 @@ interface Continent {
 }
 
 function ContinentsComponent() {
-    const { name } = useParams<{ name: string }>();
     const navigate = useNavigate();
     const [continents, setContinents] = useState<Continent[]>([]);
 
