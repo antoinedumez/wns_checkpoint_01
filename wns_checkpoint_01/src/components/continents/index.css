@@ -1,0 +1,50 @@
+.App {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #e0e0e0;
+}
+
+li button:focus {
+    outline: none;
+}
+.continents-list li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continents-list li:hover {
+    background-color: lightgray;
+}
