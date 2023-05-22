@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../logo.svg';
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import './index.css';
 import {useParams } from 'react-router-dom';
 interface CountryInformations {
