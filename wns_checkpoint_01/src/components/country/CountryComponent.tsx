@@ -37,7 +37,7 @@ function CountryComponent() {
                 setCountryInformations(countryData);
                 console.log("countryData =>", countryData);
             });
-    }, [code]);
+    });
 
     if (!countryInformations) {
         return <div>Loading...</div>;
