@@ -14,6 +14,7 @@ function CountriesComponent() {
     const navigate = useNavigate();
     const [countries, setCountries] = useState<Country[]>([]);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         const client = new ApolloClient({
             uri: 'https://countries.nausicaa.wilders.dev/',
