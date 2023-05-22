@@ -9,10 +9,9 @@ import CountryPage from './pages/CountryPage';
 function App() {
     return (
         <div>
-            <h1>Home</h1>
             <Routes>
                 <Route path="/" element={<ContinentsPage />} />
-                <Route path="/countries/:code" element={<CountriesPage />} />
+                <Route path="/countries/:name/:code" element={<CountriesPage />} />
                 <Route path="/country/:code" element={<CountryPage />} />
             </Routes>
         </div>

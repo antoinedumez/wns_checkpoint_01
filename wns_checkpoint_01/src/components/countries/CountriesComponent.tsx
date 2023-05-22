@@ -11,7 +11,7 @@ interface Country {
 }
 
 function CountriesComponent() {
-    const { code } = useParams<{ code: string }>();
+    const { name, code } = useParams<{ name: string, code: string }>();
     const navigate = useNavigate();
     const [countries, setCountries] = useState<Country[]>([]);
 
@@ -44,7 +44,7 @@ function CountriesComponent() {
 
     return (
         <div className="App">
-            <h1>Continents</h1>
+            <h1>{name}</h1>
             <ul className="continents-list">
                 {countries.map((country) => (
                     <li key={country.code} onClick={() => navigate(`/country/${country.code}`)}>{country.name} {country.emoji} </li>
