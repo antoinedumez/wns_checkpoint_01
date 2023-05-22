@@ -38,7 +38,6 @@ function CountriesComponent() {
                 const countriesDatas = result.data.continent.countries.map((country: Country) => country);
                 setCountries(countriesDatas);
                 console.log("countries =>", countriesDatas)
-
             });
 
     }, []);
