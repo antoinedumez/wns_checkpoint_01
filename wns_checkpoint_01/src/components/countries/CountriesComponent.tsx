@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import logo from '../logo.svg';
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 import './index.css';
-import { useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 interface Country {
     name: string;
@@ -11,7 +11,7 @@ interface Country {
 }
 
 function CountriesComponent() {
-
+    const { code } = useParams<{ code: string }>();
     const navigate = useNavigate();
     const [countries, setCountries] = useState<Country[]>([]);
 
@@ -24,7 +24,7 @@ function CountriesComponent() {
             .query({
                 query: gql`
                     query Query {
-                        continent(code: "AF") {
+                        continent(code: "${code?.toUpperCase()}") {
                             countries {
                                 name
                                 emoji
