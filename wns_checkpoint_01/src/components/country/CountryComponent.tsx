@@ -13,7 +13,6 @@ function CountryComponent() {
     const { code } = useParams<{ code: string }>();
     const [countryInformations, setCountryInformations] = useState<CountryInformations | null>(null);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         const client = new ApolloClient({
             uri: 'https://countries.nausicaa.wilders.dev/',
@@ -38,7 +37,7 @@ function CountryComponent() {
                 setCountryInformations(countryData);
                 console.log("countryData =>", countryData);
             });
-    }, []);
+    }, [code]);
 
     if (!countryInformations) {
         return <div>Loading...</div>;
