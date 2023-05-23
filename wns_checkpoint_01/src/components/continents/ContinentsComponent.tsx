@@ -34,7 +34,7 @@ function ContinentsComponent() {
                 const continentData = result.data.continents.map((continent: Continent) => continent);
                 setContinents(continentData);
             });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     }, []);
 
     return (

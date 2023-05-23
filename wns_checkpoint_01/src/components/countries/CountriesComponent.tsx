@@ -38,7 +38,7 @@ function CountriesComponent() {
                 setCountries(countriesDatas);
                 console.log("countries =>", countriesDatas)
             });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+
         }, []);
 
     return (
