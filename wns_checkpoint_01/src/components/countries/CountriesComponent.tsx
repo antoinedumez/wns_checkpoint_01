@@ -38,7 +38,7 @@ function CountriesComponent() {
                 setCountries(countriesDatas);
                 console.log("countries =>", countriesDatas)
             });
-    });
+    }, []);
 
     return (
         <div className="App">
