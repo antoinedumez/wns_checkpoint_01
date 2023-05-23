@@ -41,7 +41,7 @@ function CountryComponent() {
 
     useEffect(() => {
         updateData()
-    }, []);
+    }, [setCountryInformations]);
 
     if (!countryInformations) {
         return <div>Loading...</div>;

@@ -42,7 +42,7 @@ function CountriesComponent() {
 
     useEffect(() => {
         updateData()
-    }, []);
+    }, [setCountries]);
     return (
         <div className="App">
             <h1>{name}</h1>
