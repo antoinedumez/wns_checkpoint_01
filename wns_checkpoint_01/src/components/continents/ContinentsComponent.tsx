@@ -38,7 +38,7 @@ function ContinentsComponent() {
 
     useEffect(() => {
         updateData()
-    }, []);
+    }, [setContinents]);
 
     return (
         <div className="App">
