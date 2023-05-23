@@ -37,7 +37,8 @@ function CountryComponent() {
                 setCountryInformations(countryData);
                 console.log("countryData =>", countryData);
             });
-    }, []);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, []);
 
     if (!countryInformations) {
         return <div>Loading...</div>;
