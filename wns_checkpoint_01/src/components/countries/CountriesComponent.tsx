@@ -14,7 +14,7 @@ function CountriesComponent() {
     const navigate = useNavigate();
     const [countries, setCountries] = useState<Country[]>([]);
 
-    useEffect(() => {
+    const updateData = () => {
         const client = new ApolloClient({
             uri: 'https://countries.nausicaa.wilders.dev/',
             cache: new InMemoryCache(),
@@ -38,9 +38,11 @@ function CountriesComponent() {
                 setCountries(countriesDatas);
                 console.log("countries =>", countriesDatas)
             });
+        };
 
-        }, []);
-
+    useEffect(() => {
+        updateData()
+    }, []);
     return (
         <div className="App">
             <h1>{name}</h1>

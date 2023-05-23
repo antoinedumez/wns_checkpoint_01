@@ -13,7 +13,7 @@ function ContinentsComponent() {
     const [continents, setContinents] = useState<Continent[]>([]);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => {
+    const updateData = () => {
         const client = new ApolloClient({
             uri: 'https://countries.nausicaa.wilders.dev/',
             cache: new InMemoryCache(),
@@ -34,7 +34,10 @@ function ContinentsComponent() {
                 const continentData = result.data.continents.map((continent: Continent) => continent);
                 setContinents(continentData);
             });
+    };
 
+    useEffect(() => {
+        updateData()
     }, []);
 
     return (

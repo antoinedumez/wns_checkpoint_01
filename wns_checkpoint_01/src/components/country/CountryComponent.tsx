@@ -13,7 +13,7 @@ function CountryComponent() {
     const { code } = useParams<{ code: string }>();
     const [countryInformations, setCountryInformations] = useState<CountryInformations | null>(null);
 
-    useEffect(() => {
+    const updateData =() => {
         const client = new ApolloClient({
             uri: 'https://countries.nausicaa.wilders.dev/',
             cache: new InMemoryCache(),
@@ -37,8 +37,11 @@ function CountryComponent() {
                 setCountryInformations(countryData);
                 console.log("countryData =>", countryData);
             });
+        };
 
-        }, []);
+    useEffect(() => {
+        updateData()
+    }, []);
 
     if (!countryInformations) {
         return <div>Loading...</div>;
